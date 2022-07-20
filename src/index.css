@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logoStyle {
+  font-family: "Work Sans, sans-serif";
+  font-weight: 600;
+  color: "#FFFEFE";
+  display: "flex";
+  justify-content: "center"
+}

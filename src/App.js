@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import LandingPage from './page/landing/index.js';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import ListingPage from './page/Listing/listing';
+import DynamicPage from './page/Listing/dynamic';
+import SimpleForm from './page/form/simpleForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/listing' element={<ListingPage />} />
+        <Route path='/dynamic' element={<DynamicPage />} />
+        <Route path="/form" element={<SimpleForm />} />
+        <Route path="/" element={<LandingPage />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
