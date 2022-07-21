@@ -13,7 +13,7 @@ export default function Header() {
                         <Nav.Link className="text-white" href="/listing">Listing</Nav.Link>
                         <NavDropdown title={<span className="text-white my-auto">Dropdown</span>
                         } id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/dynamic">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="/dynamic">Pagination</NavDropdown.Item>
                             <NavDropdown.Item href="/form">Simple Form</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             <NavDropdown.Divider />
