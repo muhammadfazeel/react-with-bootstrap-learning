@@ -4,7 +4,6 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 export default function Card(prop) {
 
     let pushInsertNewRecord = () => {
-        console.log('Function Called...')
         cardData.push({
             title: 'Afghanistan',
             src: 'https://cdn.britannica.com/40/5340-004-B25ED5CF/Flag-Afghanistan.jpg',
@@ -23,7 +22,7 @@ export default function Card(prop) {
         <div className="container">
             <div className="row">
                 {prop?.data?.map((Item, index) => (
-                    <div key={index} class="col-sm-3 mt-2">
+                    <div key={index} className="col-sm-3 mt-2">
                         <div className="card" style={{ width: "18rem" }}>
                             <img className="card-img-top" src={Item?.src} alt="" />
                             <div className="card-body">
@@ -37,8 +36,6 @@ export default function Card(prop) {
                                 >
                                     {Item?.details}
                                 </ReactReadMoreReadLess>
-                                {/* <p>{prop.first}</p> */}
-                                {/* <button className="btn btn-primary mt-2" onClick={() => prop.setFirst("From Child...")}>Details</button> */}
                                 <br /><br />
                                 <button className="btn btn-secondary" onClick={() => pushInsertNewRecord()}>Array</button>
                                 <button className="btn btn-secondary" onClick={() => incrementCounter()}>Counter</button>

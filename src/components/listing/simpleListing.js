@@ -1,7 +1,6 @@
 import Table from 'react-bootstrap/Table';
 
 function SimpleListing(props) {
-    console.log('-----> ', props)
     return (
         <Table striped bordered hover>
             <thead>
