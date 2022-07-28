@@ -1,6 +1,4 @@
 import PostCard from "../../components/card/postCard";
-import Footer from "../../components/common/footer";
-import Header from "../../components/common/header";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Pagination from 'react-responsive-pagination';
@@ -54,7 +52,6 @@ function DynamicPage() {
     }
     return (
         <div>
-            <Header />
             {
                 loading === true ? (
                     <div className="d-flex justify-content-center">
@@ -71,9 +68,9 @@ function DynamicPage() {
                     current={currentPage}
                     onPageChange={(page) => handlePageChange(page)}
                 />
-                <Footer />
             </div>
         </div>
     );
 }
+
 export default DynamicPage;

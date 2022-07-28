@@ -2,8 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import Footer from '../../components/common/footer';
-import Header from '../../components/common/header';
 import { useState } from "react"
 import SimpleListing from '../../components/listing/simpleListing';
 
@@ -19,7 +17,7 @@ function SimpleForm() {
         zip: "",
         terms: false
     });
-    const [showMessage, setShowMessage] = useState(false);
+
     let [listing, setListing] = useState([]);
     const [formErrors, setFormErrors] = useState({});
 
@@ -78,16 +76,13 @@ function SimpleForm() {
     let onSubmit = (evt) => {
         evt.preventDefault();
         if (validateForm()) {
-            setShowMessage(true);
             listing.push(state)
             setListing([...listing])
         } else {
-            setShowMessage(false);
         }
     }
     return (
         <div>
-            <Header />
             <div className="container">
                 <div className='m-5'>
                     <Form onSubmit={(e) => onSubmit(e)}>
@@ -167,7 +162,6 @@ function SimpleForm() {
                 </div>
                 <SimpleListing listing={listing} />
             </div>
-            <Footer />
         </div>
     );
 }

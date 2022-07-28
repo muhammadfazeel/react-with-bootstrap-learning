@@ -21,7 +21,7 @@ export default function Footer() {
                 </div>
                 <div className="text-center text-white p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                     © 2020 Copyright:
-                    <a className="text-white" href="#">K@ShMiRi</a>
+                    <a className="text-white" href="/">K@ShMiRi</a>
                 </div>
             </footer >
         </div >

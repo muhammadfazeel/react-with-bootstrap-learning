@@ -15,7 +15,7 @@ export default function Header() {
                         } id="basic-nav-dropdown">
                             <NavDropdown.Item href="/dynamic">Pagination</NavDropdown.Item>
                             <NavDropdown.Item href="/form">Simple Form</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Item href="/dynamicForm">dynamicForm</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>

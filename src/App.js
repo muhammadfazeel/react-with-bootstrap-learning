@@ -9,18 +9,26 @@ import {
 import ListingPage from './page/Listing/listing';
 import DynamicPage from './page/Listing/dynamic';
 import SimpleForm from './page/form/simpleForm';
+import DynamicForm from './page/form/dynamicForm';
+import Header from './components/common/header';
+import Footer from './components/common/footer';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/listing' element={<ListingPage />} />
-        <Route path='/dynamic' element={<DynamicPage />} />
-        <Route path="/form" element={<SimpleForm />} />
-        <Route path="/" element={<LandingPage />}>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/listing' element={<ListingPage />} />
+          <Route path='/dynamicForm' element={<DynamicForm />} />
+          <Route path='/dynamic' element={<DynamicPage />} />
+          <Route path="/form" element={<SimpleForm />} />
+          <Route path="/" element={<LandingPage />}>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </div>
   );
 }
 
